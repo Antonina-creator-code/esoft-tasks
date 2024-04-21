@@ -1,0 +1,193 @@
+.App {
+  text-align: center;
+}
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.confetti-container {
+    position: fixed;
+    top: 20px;
+    left: 0; 
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.confetti {
+    position: fixed;
+    width: 5px;
+    height: 5px;
+    background-color: #ad44d5;
+    border-radius: 50%;
+    pointer-events: none;
+}
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(100vh) translateX(-50%) rotate(0deg); 
+        transform-origin: center;
+    }
+
+    50% {
+        transform: translateY(150vh) translateX(-50%) rotate(360deg); /* движение вниз в стороны */
+    }
+
+    100% {
+        transform: translateY(200vh) translateX(-50%) rotate(720deg); /* окончательное положение внизу страницы */
+    }
+}
+
+
+.skills-container {
+    display: flex;
+    flex-direction: row; 
+}
+
+.skills-column {
+    margin-bottom: 20px; 
+    margin-right: 100px;
+}
+.futureSkills-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.futureSkills-column {
+    display: flex;
+    flex-direction: column;
+}
+.mySkillsNow {
+    margin-bottom: 20px;
+    background-color: #61dafb;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-left: -300px;
+}
+.myFutureSkills {
+    margin-bottom: 20px;
+    background-color: #61dafb;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-left: -30px;
+}
+.cardAboutMe {
+    position: relative; /* Обязательно должен быть позиционирован относительно */
+}
+
+    .cardAboutMe:hover::after {
+        content: "19 y.o."; /* Замените это свойство вашим текстом */
+        position: absolute;
+        background-color: #9a9a9a; /* Цвет фона */
+        color: #fff; /* Цвет текста */
+        padding: 10px; /* Отступы вокруг текста */
+        border-radius: 5px; /* Скругление углов */
+        bottom: 100%; /* Расположить над элементом */
+        left: 50%; /* Центрировать по горизонтали */
+        transform: translateX(-50%); /* Центрировать по горизонтали */
+        white-space: nowrap; /* Запрет переноса строк */
+        z-index: 999; /* Поднять поверх других элементов */
+    }
+
+
+.petal {
+    position: relative;
+    width: 20px;
+    height: 50px;
+    background: pink; /* Розовый цвет лепестков */
+    border-radius: 50%;
+    transform-origin: 50% 100%;
+}
+.flower-toggle-button {
+    position: absolute;
+    padding: 15px;
+    top: 100px; /* Отступ сверху */
+    left: 1200px; /* Располагаем кнопку по центру горизонтально */
+    transform: translateX(-50%); /* Смещаем кнопку на половину ее ширины влево, чтобы она оказалась посередине */
+    background: pink;
+}
+    
+
+    .petal:nth-child(1) {
+        transform: rotate(0deg);
+        top: -190px;
+        right: -670px;
+    }
+
+    .petal:nth-child(2) {
+        transform: rotate(-70deg);
+        top: -230px;
+        right: -660px;
+    }
+
+    .petal:nth-child(3) {
+        transform: rotate(-140deg);
+        top: -268px;
+        right: -668px;
+    }
+
+    .petal:nth-child(4) {
+        transform: rotate(-220deg);
+        top: -320px;
+        right: -680px;
+    }
+
+    .petal:nth-child(5) {
+        transform: rotate(70deg);
+        top: -380px;
+        right: -685px;
+    }
+
+.center {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #fffdac; /* Цвет центра */
+    border-radius: 50%;
+    top: 100px; /* Отступ сверху */
+    right: 150px; /* Отступ справа */
+}
+
+.skill-card {
+    margin-bottom: 10px;
+    background-color: #9a9a9a;
+    padding: 15px;
+    border-radius: 70px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-left: -300px;
+}
+.futureSkills {
+    margin-bottom: 10px;
+    background-color: #9a9a9a;
+    padding: 15px;
+    border-radius: 70px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
